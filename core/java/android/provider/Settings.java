@@ -3438,6 +3438,23 @@ public final class Settings {
          public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
         /**
+         * Put on your ear, and this will automatically call current number in dialer
+         * @hide
+         */
+        public static final String DIRECT_CALL_FOR_DIALER = "direct_call_for_dialer";
+
+        /**
+         * Put on your ear, and this will automatically call current number in message
+         * @hide
+         */
+        public static final String DIRECT_CALL_FOR_MMS = "direct_call_for_mms";
+
+        /**
+         * Call log delete limit
+         */
+        public static final String CALL_LOG_DELETE_LIMIT = "call_log_delete_limit";
+
+        /**
          * Show search bar in recents
          * @hide
          */
