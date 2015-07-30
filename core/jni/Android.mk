@@ -243,6 +243,8 @@ LOCAL_SHARED_LIBRARIES := \
 	libpdfium \
 	libimg_utils \
 	libnetd_client \
+	libsudautils \
+	libsuda-phoneloc-jni \
 	libsoundtrigger \
 	libminikin \
 	libstlport \
