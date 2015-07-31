@@ -36,6 +36,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -296,6 +297,19 @@ public class TaskViewHeader extends FrameLayout {
                     .withLayer()
                     .start();
         }
+
+        if (mLockAppButton.getVisibility() != View.VISIBLE) {
+            mLockAppButton.setVisibility(View.VISIBLE);
+            mLockAppButton.setAlpha(0f);
+            mLockAppButton.animate()
+                    .alpha(1f)
+                    .setStartDelay(0)
+                    .setInterpolator(mConfig.fastOutLinearInInterpolator)
+                    .setDuration(mConfig.taskViewEnterFromAppDuration)
+                    .withLayer()
+                    .start();
+        }
+
     }
 
     /** Mark this task view that the user does has not interacted with the stack after a certain time. */
