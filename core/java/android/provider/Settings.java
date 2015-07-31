@@ -3107,6 +3107,19 @@ public final class Settings {
         public static final String POINTER_SPEED = "pointer_speed";
 
         /**
+         * LockedAppList
+         *
+         * @hide
+         */
+        public static final String Locked_APP_LIST = "locked_app_list";
+
+         /**
+         * Whether to dismiss all recents tasks
+         * @hide
+         */
+        public static final String RECENTS_CLEAR_ALL_DISMISS_ALL = "recents_clear_all_dismiss_all";  
+
+        /**
          * Show icon when stylus is used?
          * 0 = no
          * 1 = yes
