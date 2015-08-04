@@ -38,7 +38,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Messenger;
-import android.os.UserHandle;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import android.telephony.PhoneStateListener;
@@ -123,7 +122,7 @@ public class NetworkControllerImpl extends BroadcastReceiver
     private final BitSet mValidatedTransports = new BitSet();
 
     // States that don't belong to a subcontroller.
-    private static boolean mAirplaneMode = false;
+    private boolean mAirplaneMode = false;
     private boolean mHasNoSims;
     private Locale mLocale = null;
     // This list holds our ordering.
@@ -142,11 +141,6 @@ public class NetworkControllerImpl extends BroadcastReceiver
 
     // The current user ID.
     private int mCurrentUserId;
-
-    private static String mSpn;
-    private static String mPlmn;
-    private static boolean mShowSpn = false;
-    private static boolean mShowPlmn = false;
 
     /**
      * Construct this controller object and register for updates.
@@ -215,7 +209,6 @@ public class NetworkControllerImpl extends BroadcastReceiver
         filter.addAction(TelephonyIntents.ACTION_DEFAULT_VOICE_SUBSCRIPTION_CHANGED);
         filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION_IMMEDIATE);
         filter.addAction(ConnectivityManager.INET_CONDITION_ACTION);
-        filter.addAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
         filter.addAction(Intent.ACTION_CONFIGURATION_CHANGED);
         filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         mContext.registerReceiver(this, filter);
@@ -1312,9 +1305,7 @@ public class NetworkControllerImpl extends BroadcastReceiver
         }
 
         void updateSubscriptionInfo(SubscriptionInfo info) {
-            String mCustomCarrierLabel = Settings.System.getStringForUser(mContext.getContentResolver(),
-                        Settings.System.CUSTOM_CARRIER_LABEL, UserHandle.USER_CURRENT);
-            CharSequence carrierName = !TextUtils.isEmpty(mCustomCarrierLabel) && !mAirplaneMode ? mCustomCarrierLabel : info.getCarrierName();
+            CharSequence carrierName = info.getCarrierName();
             mCurrentState.networkName = carrierName != null ? carrierName.toString() : null;
             notifyListenersIfNecessary();
         }

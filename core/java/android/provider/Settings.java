@@ -3119,6 +3119,13 @@ public final class Settings {
          */
         public static final String POINTER_SPEED = "pointer_speed";
 
+        /**
+         * LockedAppList
+         *
+         * @hide
+         */
+        public static final String Locked_APP_LIST = "locked_app_list";
+
          /**
          * Whether to dismiss all recents tasks
          * @hide
@@ -3382,24 +3389,6 @@ public final class Settings {
          * @hide
          */
         public static final String INCREASING_RING_RAMP_UP_TIME = "increasing_ring_ramp_up_time";
-
-        /**
-         * show carrier in statusbar. The value is
-         * int (1: Show or 0: Hide).
-         */
-        public static final String STATUS_BAR_CARRIER = "status_bar_carrier";
-
-        /**
-         * custom carrier label. The value is
-         * String.
-         */
-        public static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
-
-         /**
-         * carrier size.
-         * int (5: default or 4: Small or 6: Big).
-         */
-         public static final String CARRIER_SIZE = "carrier_size";
 
         /**
          * I am the lolrus.
