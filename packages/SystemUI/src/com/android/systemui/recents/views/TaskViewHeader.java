@@ -226,7 +226,6 @@ public class TaskViewHeader extends FrameLayout {
                     lockAppUtils.removeApp(t.pkgName);
                 } else {
                     lockAppUtils.addApp(t.pkgName);
-                    tt.isLockedApp = true;
                 }
                 t.isLockedApp = !t.isLockedApp;
                 refreshBackground(t.useLightOnPrimaryColor,t.isLockedApp);
