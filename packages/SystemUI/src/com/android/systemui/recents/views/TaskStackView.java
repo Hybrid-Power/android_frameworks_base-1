@@ -611,6 +611,7 @@ public class TaskStackView extends FrameLayout implements TaskStack.TaskStackCal
                 SystemServicesProxy ssp = RecentsTaskLoader.getInstance().getSystemServicesProxy();
                 if (size > 0) {
                     ssp.removeAllUserTask(UserHandle.myUserId());
+                }
             }
         });
     }
