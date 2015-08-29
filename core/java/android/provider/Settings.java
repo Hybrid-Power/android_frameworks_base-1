@@ -3722,6 +3722,12 @@ public final class Settings {
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
         /**
+         * Network stats Color style
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_HIDE_ARROW = "network_traffic_hide_arrow";
+
+        /**
          * The statusbar configuration to be used for its creation in SystemUI
          * Fallback is the config_statusBarComponent value
          * @hide
