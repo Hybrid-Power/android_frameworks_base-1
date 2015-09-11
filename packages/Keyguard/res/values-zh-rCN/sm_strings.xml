@@ -20,8 +20,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="weather_info_not_available">没有天气信息</string>
-    <string name="permlab_recordScreen">屏幕录像</string>
-    <string name="permdesc_recordScreen">允许应用录像</string>
-    <string name="global_action_screen_record">屏幕录像</string>
 
 </resources>

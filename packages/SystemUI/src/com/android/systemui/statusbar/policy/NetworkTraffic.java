@@ -278,8 +278,6 @@ public class NetworkTraffic extends TextView {
             setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
         }
 
-        mState = Settings.System.getInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, 0);
-
         if (isSet(mState, MASK_UNIT)) {
             KB = KILOBYTE;
         } else {
