@@ -1854,6 +1854,12 @@ public final class Settings {
         public static final String NAV_BUTTONS = "nav_buttons";
 
         /**
+         * Use Cloud PhoneMark
+         * @hide
+         */
+        public static final String USE_CLOUD_MARK = "use_cloud_mark";
+
+        /**
          * @deprecated Use {@link android.provider.Settings.Global#AIRPLANE_MODE_ON} instead
          */
         @Deprecated
